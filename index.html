@@ -30,9 +30,14 @@
     background:linear-gradient(180deg, var(--teal-900) 0%, var(--teal-700) 100%);
     color:#fff;text-align:center;padding:56px 20px 64px;
   }
-  .hero img.logo{width:120px;height:auto;border-radius:16px;margin-bottom:18px;box-shadow:0 12px 30px rgba(0,0,0,0.35);}
+  .hero img.logo{width:120px;height:auto;border-radius:16px;margin-bottom:18px;box-shadow:0 12px 30px rgba(0,0,0,0.35);background:transparent;}
+  .hero img.logo.icon-style{border-radius:0;box-shadow:none;background:transparent;}
   .hero h1{font-size:2rem;margin:0 0 6px;letter-spacing:.3px;}
   .hero p{color:rgba(255,255,255,.78);font-size:.95rem;margin:0 0 26px;}
+  .quick-links{display:flex;gap:14px;justify-content:center;margin-top:20px;}
+  .quick-links a{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .15s,background .15s;}
+  .quick-links a:hover{transform:translateY(-3px);background:rgba(255,255,255,.26);}
+  .quick-links svg{width:22px;height:22px;fill:currentColor;}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:10px;border:none;font-weight:700;font-size:15px;transition:transform .08s, background .15s;}
   .btn:active{transform:scale(0.98);}
   .btn-coral{background:var(--coral);color:#fff;}
@@ -133,6 +138,17 @@
   <h1 id="heroClinicName"></h1>
   <p id="heroTagline">Medical &amp; Holistic Clinic</p>
   <a href="#booking" class="btn btn-coral">Book an appointment</a>
+  <div class="quick-links" id="quickLinks">
+    <a href="" id="qlLocation" target="_blank" rel="noopener" title="Location" style="display:none;">
+      <svg viewBox="0 0 24 24"><path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 7 12 8 12s8-6.75 8-12c0-4.42-3.58-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7.5a2.5 2.5 0 0 1 0 5z"/></svg>
+    </a>
+    <a href="" id="qlWhatsapp" target="_blank" rel="noopener" title="WhatsApp" style="display:none;">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.35A10 10 0 1 0 12 2zm0 18.1a8.07 8.07 0 0 1-4.12-1.13l-.3-.18-3.02.8.81-2.95-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.44-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+    </a>
+    <a href="" id="qlInstagram" target="_blank" rel="noopener" title="Instagram" style="display:none;">
+      <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zm0 1.8c-3.14 0-3.5.01-4.74.07-.96.04-1.48.2-1.83.34-.46.18-.79.39-1.13.73-.34.34-.55.67-.73 1.13-.14.35-.3.87-.34 1.83-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.04.96.2 1.48.34 1.83.18.46.39.79.73 1.13.34.34.67.55 1.13.73.35.14.87.3 1.83.34 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.96-.04 1.48-.2 1.83-.34.46-.18.79-.39 1.13-.73.34-.34.55-.67.73-1.13.14-.35.3-.87.34-1.83.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.83-.18-.46-.39-.79-.73-1.13-.34-.34-.67-.55-1.13-.73-.35-.14-.87-.3-1.83-.34-1.24-.06-1.6-.07-4.74-.07zm0 4.59a5.45 5.45 0 1 1 0 10.9 5.45 5.45 0 0 1 0-10.9zm0 1.8a3.65 3.65 0 1 0 0 7.3 3.65 3.65 0 0 0 0-7.3zm6.94-2a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0z"/></svg>
+    </a>
+  </div>
 </div>
 
 <main>
@@ -358,6 +374,26 @@
         <div class="msg" id="settingsMsg"></div>
       </div>
       <div class="panel">
+        <div class="panel-head"><h2>Location, WhatsApp &amp; Instagram buttons</h2></div>
+        <p style="color:var(--ink-soft);font-size:13px;margin-top:-6px;">These show as small round icon buttons under the "Book an appointment" button. Leave any of them blank to hide that button.</p>
+        <div class="field">
+          <label>Location (Google Maps link)</label>
+          <input id="settingsLocationUrl" placeholder="https://maps.app.goo.gl/...">
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:6px;">In Google Maps, search your clinic, tap Share, and copy the link here.</div>
+        </div>
+        <div class="field">
+          <label>WhatsApp button (for clients to message you)</label>
+          <input id="settingsWaLink" placeholder="e.g. 201234567890 (with country code, no + or spaces)">
+          <div style="font-size:12px;color:var(--ink-soft);margin-top:6px;">Just the number with country code — the link is built automatically. This is separate from the booking-alerts number below.</div>
+        </div>
+        <div class="field">
+          <label>Instagram link</label>
+          <input id="settingsInstaUrl" placeholder="https://instagram.com/yourclinic">
+        </div>
+        <button class="btn-ghost-dark" id="saveSocialSettingsBtn">Save</button>
+        <div class="msg" id="socialSettingsMsg"></div>
+      </div>
+      <div class="panel">
         <div class="panel-head"><h2>WhatsApp booking alerts</h2></div>
         <p style="color:var(--ink-soft);font-size:13px;margin-top:-6px;">Uses the free CallMeBot service. Your API key (<code>5924321</code>) is already filled in below — just add the clinic's WhatsApp number and hit Save to turn on booking alerts.</p>
         <div class="field"><label>Clinic WhatsApp number (with country code, digits only)</label><input id="settingsWaNumber" placeholder="e.g. 201234567890"></div>
@@ -461,6 +497,8 @@ db.collection('bkSettings').doc('main').onSnapshot(doc => {
     heroLogoEl.src = logo;
     heroLogoEl.style.display = '';
     heroLogoEl.style.width = (data.logoSize ? data.logoSize : 120) + 'px';
+    if(logo.toLowerCase().split('?')[0].endsWith('.ico')){ heroLogoEl.classList.add('icon-style'); }
+    else { heroLogoEl.classList.remove('icon-style'); }
   }
   else { heroLogoEl.removeAttribute('src'); heroLogoEl.style.display = 'none'; }
   document.getElementById('heroClinicName').textContent = name;
@@ -473,6 +511,18 @@ db.collection('bkSettings').doc('main').onSnapshot(doc => {
   const faviconEl = document.getElementById('faviconLink');
   if(favicon){ faviconEl.setAttribute('href', favicon); }
   else { faviconEl.removeAttribute('href'); }
+  const qlLocation = document.getElementById('qlLocation');
+  if(data.locationUrl){ qlLocation.href = data.locationUrl; qlLocation.style.display = ''; }
+  else { qlLocation.removeAttribute('href'); qlLocation.style.display = 'none'; }
+  const qlWhatsapp = document.getElementById('qlWhatsapp');
+  if(data.publicWaNumber){ qlWhatsapp.href = 'https://wa.me/' + data.publicWaNumber; qlWhatsapp.style.display = ''; }
+  else { qlWhatsapp.removeAttribute('href'); qlWhatsapp.style.display = 'none'; }
+  const qlInstagram = document.getElementById('qlInstagram');
+  if(data.instagramUrl){ qlInstagram.href = data.instagramUrl; qlInstagram.style.display = ''; }
+  else { qlInstagram.removeAttribute('href'); qlInstagram.style.display = 'none'; }
+  document.getElementById('settingsLocationUrl').value = data.locationUrl || '';
+  document.getElementById('settingsWaLink').value = data.publicWaNumber || '';
+  document.getElementById('settingsInstaUrl').value = data.instagramUrl || '';
   document.title = name ? (name + ' — Book an Appointment') : 'Book an Appointment';
   document.getElementById('settingsClinicName').value = name;
   document.getElementById('settingsTagline').value = tagline;
@@ -1156,6 +1206,17 @@ document.getElementById('saveSettingsBtn').onclick = async () => {
   const msg = document.getElementById('settingsMsg');
   try{
     await db.collection('bkSettings').doc('main').set({ clinicName, tagline, contactEmail, logoUrl, logoSize, faviconUrl, heroBackgroundUrl }, { merge: true });
+    msg.textContent = 'Saved.'; msg.className = 'msg ok';
+  }catch(err){ msg.textContent = err.message; msg.className = 'msg err'; }
+};
+
+document.getElementById('saveSocialSettingsBtn').onclick = async () => {
+  const locationUrl = document.getElementById('settingsLocationUrl').value.trim();
+  const publicWaNumber = document.getElementById('settingsWaLink').value.trim();
+  const instagramUrl = document.getElementById('settingsInstaUrl').value.trim();
+  const msg = document.getElementById('socialSettingsMsg');
+  try{
+    await db.collection('bkSettings').doc('main').set({ locationUrl, publicWaNumber, instagramUrl }, { merge: true });
     msg.textContent = 'Saved.'; msg.className = 'msg ok';
   }catch(err){ msg.textContent = err.message; msg.className = 'msg err'; }
 };
